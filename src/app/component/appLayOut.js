@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import { useRouter } from 'next/navigation'; // Import useRouter from next/router
@@ -18,7 +19,7 @@ import { useNavigation } from 'next/navigation';
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
-const AppLayout = React.memo(({ val: Child, selected }) => {
+const AppLayout = React.memo(({ children }) => {
     const router = useRouter();
     const pathname = usePathname();
     const [collapsed, setCollapsed] = useState(false);
@@ -80,11 +81,12 @@ const AppLayout = React.memo(({ val: Child, selected }) => {
             <Layout className="site-layout">
                 <Header className="site-layout-background" style={{ padding: 0, backgroundColor: colors.black, }}></Header>
                 <Content className="site-layout-background">
-                    <Child />
+                { children }
                 </Content>
             </Layout>
         </Layout>
     );
 });
+AppLayout.displayName = 'AppLayout';
 
 export default AppLayout;

@@ -12,7 +12,7 @@ const MyOrders = () => {
         setFilter(!filter)
     }
     return (
-        <>
+        <AppLayout>
             <div className="layoutContent p-5">
                 <Row>
                     <Col md={5} sm={12}><h1 style={{ color: 'white' }}>My Orders</h1></Col>
@@ -80,9 +80,9 @@ const MyOrders = () => {
                 <div className="orderHistory mt-3">
 
                     {
-                        orders.map((item) => {
+                        orders.map((item,index) => {
                             return (
-                                <div className="order mt-2">
+                                <div key={index} className="order mt-2">
                                     <Row style={{ width: '100%' }}>
                                         <Col sm={12} md={2} lg={2} xl={2}><img style={{ height: '100px', width: '100px' }} src={'./images/product.png'} /></Col>
                                         <Col sm={12} md={4} lg={3} xl={4}> <div>
@@ -111,8 +111,8 @@ const MyOrders = () => {
             </div>
 
 
-        </>
+        </AppLayout>
     )
 }
 
-export default () => <AppLayout selected={'2'} val={MyOrders} />;
+export default  MyOrders

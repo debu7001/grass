@@ -7,7 +7,7 @@ import { MdFilterListAlt } from "react-icons/md";
 const AllNotification = () => {
     const notification = [1, 2, 3, 4, 5, 6, 7, 8]
     return (
-        <>
+        <AppLayout>
             <div className="layoutContent p-5">
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>All Notifications</h1></Col>
@@ -16,9 +16,9 @@ const AllNotification = () => {
                 <div className="orderHistory mt-3 ">
 
                     {
-                        notification.map((item) => {
+                        notification.map((item,index) => {
                             return (
-                                <div className="notification mt-2">
+                                <div key={index} className="notification mt-2">
                                     <Row style={{ width: '100%' }}>
                                         <Col md={9}>
                                             <span className="notificationTitle">Lorem ipsum dolor sit amet consectetur?</span>
@@ -42,10 +42,10 @@ const AllNotification = () => {
 
 
 
-        </>
+        </AppLayout>
     )
 }
 
 
 
-export default () => <AppLayout selected={'5'} val={AllNotification} />;
+export default AllNotification

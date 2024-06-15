@@ -7,7 +7,7 @@ import { MdFilterListAlt } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 const savedCards = () => {
     return (
-        <>
+        <AppLayout>
             <div className="layoutContent p-5">
             <h1 style={{ color: 'white' }}>Saved Cards</h1>
            
@@ -22,10 +22,10 @@ const savedCards = () => {
                 </div>
                 </div>
             </div>
-        </>
+        </AppLayout>
     )
 }
 
 
 
-export default () => <AppLayout selected={'1'} val={savedCards} />;
+export default  savedCards

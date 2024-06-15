@@ -8,7 +8,7 @@ const Dashboard = () => {
     const orders = [1, 2, 3]
     const notification = [1, 2, 3, 4]
     return (
-        <>
+        <AppLayout>
             <div className="layoutContent p-5">
                 <Row>
                     <Col md={5} sm={12}><h1 style={{ color: 'white' }}>Dashboard</h1></Col>
@@ -28,7 +28,7 @@ const Dashboard = () => {
                     </Col>
                 </Row>
                 <Row>
-                    <Col className=" mt-5">
+                    <Col md={7} className=" mt-5">
                         <div className="useInfoWithImg">
                             <img className="prodileImgdashboard" src={'./images/profile.png'} />
                             <div className="userInfo">
@@ -41,12 +41,12 @@ const Dashboard = () => {
                         <div className="orderHistory mt-3">
                             <span style={{ color: 'white' }}>Order History</span>
                             {
-                                orders.map((item) => {
+                                orders.map((item,index) => {
                                     return (
-                                        <div className="order mt-2">
+                                        <div key={index} className="order mt-2">
                                             <Row style={{ width: '100%' }}>
-                                                <Col sm={12} md={2}><img style={{ height: '100px' }} src={'./images/product.png'} /></Col>
-                                                <Col sm={12} md={7}> <div>
+                                                <Col sm={12} md={3}><img style={{ height: '100px' }} src={'./images/product.png'} /></Col>
+                                                <Col sm={12} md={4}> <div>
                                                     <span>Lorem ipsum dolor sit amet consectetur.</span><br />
                                                     <span className="lightText">27% THC</span><br />
                                                     <span className="lightText">Humboldt Farms</span><br />
@@ -66,7 +66,7 @@ const Dashboard = () => {
 
                         </div>
                     </Col>
-                    <Col>
+                    <Col md={5}>
                         <div className="chartContainer">
                             <div className="flexBetween">
                                 <span className="revenueTxt">Revenue</span>
@@ -79,9 +79,9 @@ const Dashboard = () => {
                             <div className="orderHistory mt-3">
                                 <span style={{ color: 'white' }}>Notifications</span>
                                 {
-                                    notification.map((item) => {
+                                    notification.map((item,index) => {
                                         return (
-                                            <div className="notification mt-2">
+                                            <div key={index} className="notification mt-2">
                                                 <Row style={{ width: '100%' }}>
                                                     <Col md={9}>
                                                         <span className="notificationTitle">Lorem ipsum dolor sit amet consectetur?</span>
@@ -108,8 +108,10 @@ const Dashboard = () => {
               
 
             </div>
-        </>
+        </AppLayout>
     )
 }
 
-export default () => <AppLayout selected={'1'} val={Dashboard} />;
+
+
+export default Dashboard
