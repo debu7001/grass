@@ -411,3 +411,109 @@ body {
   margin-top: 20px;
   color: black;
 }
+
+.credits {
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
+
+.walletRecord {
+  border-bottom: 1px solid #ffffff8c;
+  padding-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+
+}
+
+.inputField {
+  min-width: 100%;
+  border: 1px solid #ffffff78;
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px 20px 10px 20px;
+  color: white;
+}
+
+.editInfo {
+  display: flex;
+  align-items: center;
+  background-color: #282828;
+  width: fit-content;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.faq {
+  color: rgba(255, 255, 255, 0.541);
+  opacity: 0.8;
+}
+
+.faqHead {
+  color: rgba(255, 255, 255, 0.521);
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.addaddress {
+  color: #1FDF64;
+  border: 1px solid #1FDF64;
+  padding: 5px 10px 5px 10px;
+  border-radius: 30px;
+}
+.addressType {
+  color: #1FDF64;
+  background-color: #1fdf6436;
+  padding: 3px 15px 5px 15px;
+  border-radius: 30px;
+  font-size: small;
+}
+
+.addressContainer {
+  border: 1px solid #ffffff5e;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.location {
+  width: fit-content;
+  background-color: #237bff59;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+  color: #237BFF;
+  cursor: pointer;
+}
+
+.buttonSave{
+  border-radius: 30px  !important;
+  width: 100px !important;
+  background-color: 01813D !important;
+  border: none !important;
+}
+
+
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid 01813D;
+  width: 100px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.cancelButton {
+  backgroundcolor: transparent;
+  border: 1px solid green;
+  background-color: transparent;
+}
+
+

@@ -27,7 +27,11 @@ const AppLayout = React.memo(({ children }) => {
     const menuItems = [
         { key: '1', icon: <MdOutlineSpaceDashboard size={25} />, label: 'Dashboard', route: '/dashboard' },
         { key: '2', icon: <IoBagCheckOutline size={25} />, label: 'My Orders', route: '/orders' },
-        { key: '3', icon: <RiUserSettingsFill size={25} />, label: 'Account Settings', route: '/account-settings' },
+        { key: '3', icon: <RiUserSettingsFill size={25} />, label: 'Account Settings', route: '/account-settings', subMenu: [
+                { key: '5-1', label: 'Profile information', route: '/profile-information' },
+                { key: '5-2', label: 'Manage Addresses', route: '/manage-addresses' },
+                { key: '5-3', label: 'My Documents', route: '/my-documents' },
+            ] },
         { key: '4', icon: <FaHandHoldingDollar size={25} />, label: 'Payments', route: '/payments',
         subMenu: [
             { key: '5-1', label: 'Wallet', route: '/wallet' },
