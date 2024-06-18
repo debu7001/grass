@@ -90,7 +90,8 @@ const AppLayout = React.memo(({ children }) => {
                                     {item.subMenu.map(subItem => (
                                         <Menu.Item key={subItem.key} className={pathname === subItem.route ? 'menuItemStyle3' : 'menuItemStyle'}>
                                             <Link style={{ textDecorationLine: 'none' }} href={subItem.route}>
-                                                <span style={{ color: pathname === subItem.route ? '#1FDF64' : 'white', textDecoration: 'none' }}>{subItem.label}</span>
+                                         
+                                                <span style={{ color: pathname === subItem.route ? '#1FDF64' : 'white', textDecoration: 'none' }}>{subItem.label}</span> {subItem.route=='/wallet' && <span style={{color:'white'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</span> }
                                             </Link>
                                         </Menu.Item>
                                     ))}
@@ -126,7 +127,7 @@ const AppLayout = React.memo(({ children }) => {
                 <img className='profileOnHeader' src="/images/profile.png" />
                      <CiBellOn className='bell' size={30}/>
                 </Header>
-                <Content className="site-layout-background" >
+                <Content className="site-layout-background">
                     {children}
                 </Content>
             </Layout>

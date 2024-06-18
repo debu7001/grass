@@ -32,7 +32,7 @@ const Dashboard = () => {
                 <Row>
                     <Col md={7} lg={6} className=" mt-5">
                         <div className="useInfoWithImg">
-                            <Row>
+                            <Row style={{width:'100%'}}>
                                 <Col xl={5} md={6} lg={12} sm={12} style={{display:'flex',justifyContent:'center'}}> <img className="prodileImgdashboard" src={'./images/profile.png'} /></Col>
                                 <Col xl={7} md={6} lg={12} sm={12}>  <div className="userInfo">
                                 <span>Hello!</span><br />
