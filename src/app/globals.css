@@ -380,7 +380,8 @@ body {
   background-color: #282828;
   position: absolute;
   margin-top: 45px;
-  width: 200px;
+  right: 50px;
+  width: 250px;
   z-index: 1;
   border-radius: 15px;
   padding: 20px;
@@ -401,15 +402,17 @@ body {
 .oneCheckBox {
   display: flex;
   align-items: center;
+  font-size: medium;
+  margin-bottom: 5px;
 }
 
 .filterapply {
   width: 100%;
-  background-color: #1FDF64;
+  background-color: #1FDF64 !important ;
   outline: none;
   border: none;
   margin-top: 20px;
-  color: black;
+  color: black !important;
 }
 
 .credits {
@@ -502,18 +505,106 @@ body {
 
 
 
-.cancelButton {
-  background-color: transparent;
-  border: 1px solid 01813D;
-  width: 100px;
+
+.cancle {
   border-radius: 30px;
-  margin-left: 10px;
+  border: 1px solid #1FDF64;
+  background: transparent;
+  color: #1FDF64;
+  padding: 10px 30px 10px 30px;
 }
 
-.cancelButton {
-  backgroundcolor: transparent;
-  border: 1px solid green;
-  background-color: transparent;
+.cancle:hover {
+  background-color: #1FDF64;
+  color: white;
+}
+
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Set the size of the checkbox */
+  width: 16px;
+  height: 16px;
+  /* Style the custom checkbox */
+  border: 1px solid #1FDF64; /* Border color */
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  /* Positioning */
+  position: relative;
+}
+
+/* Custom check mark (pseudo-element) */
+input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #1FDF64; /* Green check mark color */
+  border-radius: 1px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.2s ease; /* Smooth transition */
+}
+
+/* Show the check mark when the checkbox is checked */
+input[type="checkbox"]:checked::before {
+  opacity: 1;
 }
 
 
+
+
+.spaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.copyRight {
+  /* position: fixed; */
+  bottom: 0;
+  padding: 20px;
+  color: #ffffff47;
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.socialIcon {
+  padding: 5px;
+  background-color: #ffffff17;
+  font-size: x-large;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.bell {
+  color: white;
+  position: absolute;
+  right: 100px;
+  top: 15px;
+}
+
+.profileOnHeader {
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: 50px;
+  top: 12px;
+}
+
+.dropDownArrow {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}

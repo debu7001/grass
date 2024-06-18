@@ -13,7 +13,7 @@ const ProfileInformation = () => {
     const [email, setEmail] = useState('Shuvra.paul@excellisit.com')
     const [mobile, setMobile] = useState(1234567890)
     const [edit, setEdit] = useState(false)
-
+    
     const isMobile = useMediaQuery({ maxWidth: 767 }); 
 
     const data=[1,2,3]
@@ -70,13 +70,14 @@ const ProfileInformation = () => {
                             edit && (
                                 <Row className="mt-3">
                                
-                                <Col>
+                                <Col sm={12} >
 
-                                <button className="btn btn-success buttonSave" onClick={() => { setEdit(false) }}>Save</button>
-                                <button className="btn btn-secondary cancelButton " style={{ backgroundcolor: 'transparent', borderRadius: '30px' }}>Cancle</button>
+                                <button className=" cancle" onClick={() => { setEdit(false) }}>Save</button>
+                                    <button className=" cancle ml-2">Cancle</button>
+
+                             
                                 </Col>
-                                <Col> </Col>
-                                <Col></Col>
+                               
                             </Row>
                             )
                            }

@@ -4,11 +4,13 @@ import { colors } from "../constent/colors"
 import { Row, Col } from 'react-bootstrap'
 import { MdFilterListAlt } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
+import { useMediaQuery } from 'react-responsive';
 const MywishList = () => {
     const orders = [1, 2, 3,4,5]
+    const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
         <AppLayout>
-            <div className="layoutContent p-5">
+            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>My Wishlist</h1></Col>
                    

@@ -3,12 +3,14 @@ import AppLayout from "../component/appLayOut"
 import { colors } from "../constent/colors"
 import { Row, Col } from 'react-bootstrap'
 import { MdFilterListAlt } from "react-icons/md";
+import { useMediaQuery } from 'react-responsive';
 
 const AllNotification = () => {
     const notification = [1, 2, 3, 4, 5, 6, 7, 8]
+    const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
         <AppLayout>
-            <div className="layoutContent p-5">
+            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>All Notifications</h1></Col>
 

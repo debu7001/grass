@@ -11,7 +11,7 @@ const Mydocuments = () => {
             <h2 style={{ color: 'white' }}>My documents</h2>
 
             <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
-               <button className="addaddress mb-4" onClick={() => { setAdd(true) }}> + Attach New Document*</button><br />
+               <button className="addaddress mb-4" > + Attach New Document*</button><br />
                <span style={{ color: 'white' }}>Attached Document</span>
                <div style={{ marginTop: '10px' }}>
                   <div style={{ position: 'relative', width: 'fit-content' }}>

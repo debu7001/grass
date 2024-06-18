@@ -75,8 +75,9 @@ const ManageAddress = () => {
                                         <input type="radio" name="type" value="Home" /> Home &nbsp;&nbsp;
                                         <input type="radio" name="type" value="Work" /> Work
                                     </div>
-                                    <button className="btn btn-success buttonSave" onClick={() => { setAdd(false) }}>Save</button>
-                                    <button className="btn btn-secondary cancelButton " style={{ backgroundcolor: 'transparent', borderRadius: '30px' }}>Cancle</button>
+                                    <button className=" cancle" onClick={() => { setAdd(false) }}>Save</button>
+                                    <button className=" cancle ml-2">Cancle</button>
+                                   
                                 </Col>
                             </Row>
 
@@ -140,8 +141,9 @@ const ManageAddress = () => {
                                             <input type="radio" name="type" value="Home" /> Home &nbsp;&nbsp;
                                             <input type="radio" name="type" value="Work" /> Work
                                         </div>
-                                        <button className="btn btn-success buttonSave" onClick={() => { setEdit(false) }}>Save</button>
-                                        <button className="btn btn-secondary cancelButton " style={{ backgroundcolor: 'transparent', borderRadius: '30px' }}>Cancle</button>
+                                        <button className=" cancle" onClick={() => { setEdit(false) }}>Save</button>
+                                    <button className=" cancle ml-2">Cancle</button>
+                                        
                                     </Col>
                                 </Row>
 
