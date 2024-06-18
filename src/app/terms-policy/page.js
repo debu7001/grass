@@ -25,4 +25,4 @@ const TermsPolicy=()=>{
 
 
 
-export default  TermsPolicy
+export default TermsPolicy

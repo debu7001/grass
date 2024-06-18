@@ -6,7 +6,7 @@ import { Row, Col } from 'react-bootstrap'
 import { MdFilterListAlt } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { useMediaQuery } from 'react-responsive';
-const savedCards = () => {
+const SavedCards = () => {
     const [add, setAdd] = useState(false)
     const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
@@ -86,4 +86,4 @@ const savedCards = () => {
 
 
 
-export default savedCards
+export default SavedCards
