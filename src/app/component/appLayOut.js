@@ -83,7 +83,7 @@ const AppLayout = React.memo(({ children }) => {
                     </div>
                 </div>
                 <div>
-                    <Menu theme="dark" mode="inline" style={{ marginTop: '20px', backgroundColor: colors.black, padding: '0 10px 0 10px',minHeight:'70vh' }}  >
+                    <Menu theme="dark" mode="inline" style={{ marginTop: '20px', backgroundColor: colors.black, padding: '0 10px 0 10px' }}  >
                         {menuItems.map(item => (
                             item.subMenu ? (
                                 <SubMenu key={item.key} className={item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'menuItemStyle2' : 'menuItemStyle'} icon={item.icon} title={<span>{item.label}</span>}>
