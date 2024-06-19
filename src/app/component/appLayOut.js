@@ -31,6 +31,7 @@ const AppLayout = React.memo(({ children }) => {
     const pathname = usePathname();
     const isMobile = useMediaQuery({ maxWidth: 767 }); 
     const [collapsed, setCollapsed] = useState(isMobile?true:false);
+    const [sidebarShow,setSidebarShow]=useState(true)
 
     useEffect(()=>{
         if(isMobile){
@@ -74,55 +75,65 @@ const AppLayout = React.memo(({ children }) => {
 
     return (
         <Layout style={{ minHeight: '100vh' }} hasSider>
-           
-            <Sider trigger={null} width={300} collapsible breakpoint="md" collapsed={collapsed} style={{ backgroundColor: colors.black }}>
-                <div className="logo" onClick={toggle}>
-                    <div className="alignLogoMenuBar">
-                        <img style={{ height: '50px' }} src="/images/logo.png" />
-                        {!collapsed && (<span className="grassMenuBar">Grass App</span>)}
-                    </div>
-                </div>
-                <div>
-                    <Menu theme="dark" mode="inline" style={{ marginTop: '20px', backgroundColor: colors.black, padding: '0 10px 0 10px' }}  >
-                        {menuItems.map(item => (
-                            item.subMenu ? (
-                                <SubMenu key={item.key}  className={item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'menuItemStyle2' : 'menuItemStyle'} icon={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : '#1FDF64' }}>{item.icon}</span>} title={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : 'white' }}>{item.label}</span>}>
-                                    {item.subMenu.map(subItem => (
-                                        <Menu.Item key={subItem.key} className={pathname === subItem.route ? 'menuItemStyle3' : 'menuItemStyle'}>
-                                            <Link style={{ textDecorationLine: 'none' }} href={subItem.route}>
-                                         
-                                                <span style={{ color: pathname === subItem.route ? '#1FDF64' : 'white', textDecoration: 'none' }}>{subItem.label}</span> {subItem.route=='/wallet' && <span style={{color:'white'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</span> }
-                                            </Link>
-                                        </Menu.Item>
-                                    ))}
-                                </SubMenu>
-                            ) : (
-                                <Menu.Item key={item.key} icon={item.icon} className={pathname === item.route ? 'menuItemStyle2' : 'menuItemStyle'}>
-                                    <Link style={{ textDecorationLine: 'none' }} href={item.route}>
-                                        <span style={{ color: pathname === item.route ? 'black' : 'white', textDecoration: 'none' }}>{item.label}</span>
-                                    </Link>
-                                </Menu.Item>
-                            )
-                        ))}
-                    </Menu>
-                    {
-                        !collapsed && (
-                            <div className='copyRight'>
-                            <div className='socialContainer mb-2'>
-                                <div className='socialIcon'><FaFacebook /></div>
-                                <div className='socialIcon'> <RiInstagramFill /></div>
-                                <div className='socialIcon'> <FaTwitter /></div>
-                                <div className='socialIcon'> <FaLinkedinIn /></div>
-                            </div>
-                            Copyright © 2024.<br /> All rights reserved.<br /> designed & developed by excellis IT.
+
+
+            {
+                ((isMobile && sidebarShow) || (!isMobile)) && (
+                    <Sider trigger={null} width={300} collapsible breakpoint="md" collapsed={collapsed} style={{ backgroundColor: colors.black }}>
+                    <div className="logo" onClick={toggle}>
+                        <div className="alignLogoMenuBar">
+                            <img style={{ height: '50px' }} src="/images/logo.png" />
+                            {!collapsed && (<span className="grassMenuBar">Grass App</span>)}
                         </div>
-                        )
-                    }
-                  
-                </div>
-            </Sider>
+                    </div>
+                    <div>
+                        <Menu theme="dark" mode="inline" style={{ marginTop: '20px', backgroundColor: colors.black, padding: '0 10px 0 10px' }}  >
+                            {menuItems.map(item => (
+                                item.subMenu ? (
+                                    <SubMenu key={item.key}  className={item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'menuItemStyle2' : 'menuItemStyle'} icon={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : '#1FDF64' }}>{item.icon}</span>} title={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : 'white' }}>{item.label}</span>}>
+                                        {item.subMenu.map(subItem => (
+                                            <Menu.Item key={subItem.key} className={pathname === subItem.route ? 'menuItemStyle3' : 'menuItemStyle'}>
+                                                <Link style={{ textDecorationLine: 'none' }} href={subItem.route}>
+                                             
+                                                    <span style={{ color: pathname === subItem.route ? '#1FDF64' : 'white', textDecoration: 'none' }}>{subItem.label}</span> {subItem.route=='/wallet' && <span style={{color:'white'}}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</span> }
+                                                </Link>
+                                            </Menu.Item>
+                                        ))}
+                                    </SubMenu>
+                                ) : (
+                                    <Menu.Item key={item.key} icon={item.icon} className={pathname === item.route ? 'menuItemStyle2' : 'menuItemStyle'}>
+                                        <Link style={{ textDecorationLine: 'none' }} href={item.route}>
+                                            <span style={{ color: pathname === item.route ? 'black' : 'white', textDecoration: 'none' }}>{item.label}</span>
+                                        </Link>
+                                    </Menu.Item>
+                                )
+                            ))}
+                        </Menu>
+                        {
+                            !collapsed && (
+                                <div className='copyRight'>
+                                <div className='socialContainer mb-2'>
+                                    <div className='socialIcon'><FaFacebook /></div>
+                                    <div className='socialIcon'> <RiInstagramFill /></div>
+                                    <div className='socialIcon'> <FaTwitter /></div>
+                                    <div className='socialIcon'> <FaLinkedinIn /></div>
+                                </div>
+                                Copyright © 2024.<br /> All rights reserved.<br /> designed & developed by excellis IT.
+                            </div>
+                            )
+                        }
+                      
+                    </div>
+                </Sider>
+                )
+            }
+           
+           
             <Layout className="site-layout">
                 <Header className="site-layout-background" style={{ padding: 0, backgroundColor: colors.black, }}>
+                    {
+                        isMobile && ( <h3 className='mt-3 ml-3' style={{color:'white'}} onClick={()=>{setSidebarShow(!sidebarShow)}}>Grass App</h3>)
+                    }
                     <RiArrowDropDownLine className='dropDownArrow' size={30}/>
                 <img className='profileOnHeader' src="/images/profile.png" />
                      <CiBellOn className='bell' size={30}/>
