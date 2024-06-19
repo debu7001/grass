@@ -16,7 +16,7 @@ const MyOrders = () => {
     }
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col xl={5} md={4} sm={12}><h1 style={{ color: 'white' }}>My Orders</h1></Col>
                     <Col xl={7} md={8} sm={12}>

@@ -7,10 +7,10 @@ const Mydocuments = () => {
    const isMobile = useMediaQuery({ maxWidth: 767 });
    return (
       <AppLayout>
-         <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+         <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
             <h2 style={{ color: 'white' }}>My documents</h2>
 
-            <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+            <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                <button className="addaddress mb-4" > + Attach New Document*</button><br />
                <span style={{ color: 'white' }}>Attached Document</span>
                <div style={{ marginTop: '10px' }}>

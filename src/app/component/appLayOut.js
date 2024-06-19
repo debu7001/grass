@@ -86,7 +86,7 @@ const AppLayout = React.memo(({ children }) => {
                     <Menu theme="dark" mode="inline" style={{ marginTop: '20px', backgroundColor: colors.black, padding: '0 10px 0 10px' }}  >
                         {menuItems.map(item => (
                             item.subMenu ? (
-                                <SubMenu key={item.key} className={item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'menuItemStyle2' : 'menuItemStyle'} icon={item.icon} title={<span>{item.label}</span>}>
+                                <SubMenu key={item.key}  className={item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'menuItemStyle2' : 'menuItemStyle'} icon={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : '#1FDF64' }}>{item.icon}</span>} title={<span style={{ color: item.subMenu.some(subItem => pathname.startsWith(subItem.route)) ? 'black' : 'white' }}>{item.label}</span>}>
                                     {item.subMenu.map(subItem => (
                                         <Menu.Item key={subItem.key} className={pathname === subItem.route ? 'menuItemStyle3' : 'menuItemStyle'}>
                                             <Link style={{ textDecorationLine: 'none' }} href={subItem.route}>

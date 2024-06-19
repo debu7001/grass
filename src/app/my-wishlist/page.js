@@ -10,7 +10,7 @@ const MywishList = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>My Wishlist</h1></Col>
                    
@@ -23,7 +23,17 @@ const MywishList = () => {
                             return (
                                 <div key={index} className="order mt-2">
                                     <Row style={{ width: '100%' }}>
-                                        <Col sm={12} md={2}><img style={{ height: '100px' }} src={'./images/product.png'} /></Col>
+                                       
+                                        <Col sm={12} md={2} className="wishListimageWithDeleteForMobile"><img style={{ height: '100px',display:'flex' }} src={'./images/product.png'} /> 
+                                        {
+                                            isMobile && (
+                                                <div className="deleteContainer">
+                                                <RiDeleteBin5Fill color={'red'}/>
+                                            </div>
+                                            )
+                                        }
+                                        
+                                        </Col>
                                         <Col sm={12} md={4}> <div>
                                             <span>Lorem ipsum dolor sit amet consectetur.</span><br />
                                             <span className="lightText">27% THC</span><br />
@@ -35,9 +45,11 @@ const MywishList = () => {
                                         <span>$63.20</span>
                                         </Col>
                                         <Col sm={12} md={2} className="deleteContainerCol">
-                                        <div className="deleteContainer">
-                                            <RiDeleteBin5Fill color={'red'}/>
-                                        </div>
+                                        {
+                                            !isMobile && (<div className="deleteContainer">
+                                                <RiDeleteBin5Fill color={'red'}/>
+                                            </div>)
+                                        }
                                         </Col>
                                     </Row>
 

@@ -11,7 +11,7 @@ const Dashboard = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 }); 
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col xl={4} lg={3} md={5} sm={12}><h1 style={{ color: 'white' }}>Dashboard</h1></Col>
                     <Col xl={8} lg={9} md={7} sm={12}>

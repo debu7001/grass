@@ -7,7 +7,7 @@ const TermsPolicy=()=>{
     const data=[1,2,3,4,5,6,7]
    return(
     <AppLayout>
-     <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+     <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
      <h2  style={{color:'white'}}>Terms & Policy</h2>
                  {
                     data.map((item)=>{

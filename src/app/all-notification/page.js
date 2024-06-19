@@ -10,7 +10,7 @@ const AllNotification = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>All Notifications</h1></Col>
 

@@ -19,14 +19,14 @@ const ProfileInformation = () => {
     const data=[1,2,3]
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col md={5} sm={12}><h1 style={{ color: 'white' }}>Profile Information</h1></Col>
                     <Col md={7} sm={12}>
                     </Col>
                 </Row>
 
-                <div  className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                <div  className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                     <Row>
                         <Col md={9}>
                             <Row>
@@ -40,12 +40,12 @@ const ProfileInformation = () => {
                             </Row>
                             <Row>
                                 <strong className="mb-2 mt-3">Your Gender</strong><br />
-                                <Col>
+                                <Col sm={12} md={6} xxl={4} className="useInfoWithImg">
 
-                                    <input type="radio" name="gender" value="male" /> Male &nbsp;&nbsp;
-                                    <input type="radio" name="gender" value="female" /> Female
+                                    <input type="radio" name="gender" value="male" />&nbsp; Male &nbsp;&nbsp;
+                                    <input type="radio" name="gender" value="female" />&nbsp; Female
                                 </Col>
-                                <Col></Col>
+                                <Col sm={12} md={6} xxl={4}></Col>
                                 
                             </Row>
                             <Row>

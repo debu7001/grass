@@ -189,7 +189,7 @@ body {
   border-radius: 30px !important;
   font-weight: 500 !important;
   background-color: #1FDF64 !important;
-  color: black !important;
+  color:black !important;
   border-radius: 30px !important;
   margin-bottom: 20px !important;
 }
@@ -212,6 +212,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 
 .deleteContainerCol {
@@ -611,4 +612,32 @@ input[type="checkbox"]:checked::before {
   position: absolute;
   right: 20px;
   top: 15px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px; /* Adjust size as needed */
+  height: 18px; /* Adjust size as needed */
+  border: 2px solid #1FDF64; /* Border color */
+  border-radius: 50%; /* Rounded shape */
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked {
+  background-color: #1FDF64; /* Filled color when checked */
+  border-color: #1FDF64; /* Border color when checked */
+}
+
+input[type="radio"]:focus {
+  box-shadow: 0 0 5px #1FDF64; /* Focus outline color */
+}
+
+.wishListimageWithDeleteForMobile {
+  display: flex;
+ 
+  justify-content: space-between;
 }

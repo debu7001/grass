@@ -20,7 +20,7 @@ const ManageAddress = () => {
 
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col md={6} sm={12}><h1 style={{ color: 'white' }}>Manage Addresses</h1></Col>
 
@@ -28,7 +28,7 @@ const ManageAddress = () => {
 
                 {
                     (add && !edit) && (
-                        <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                        <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                             ADD A NEW ADDRESS <br />
 
                             <div className="location mt-4 mb-2"> <CgTrack size={20} /> &nbsp;&nbsp; <span> Use My Current Location</span></div>
@@ -36,44 +36,51 @@ const ManageAddress = () => {
                                 <Col md={10}>
                                     <Row className="mt-3">
 
-                                        <Col>
+                                        <Col className="mb-2">
                                             <input className="inputField " placeholder="Name" />
                                         </Col>
-                                        <Col> <input className="inputField" placeholder="Mobile Number" /></Col>
+                                        <Col className="mb-2"> <input className="inputField" placeholder="Mobile Number" /></Col>
                                         <Col>
                                         </Col>
                                     </Row>
                                     <Row className="mt-3">
 
-                                        <Col>
+                                        <Col className="mb-2">
                                             <input className="inputField " placeholder="Pin Code" />
                                         </Col>
-                                        <Col> <input className="inputField" placeholder="Locality" /></Col>
+                                        <Col className="mb-2"> <input className="inputField" placeholder="Locality" /></Col>
                                         <Col>
                                         </Col>
                                     </Row>
                                     <Row className="mt-3">
 
-                                        <Col>
+                                        <Col className="mb-2">
                                             <input className="inputField " placeholder="City/District/Town" />
                                         </Col>
-                                        <Col> <input className="inputField" placeholder="Select State" /></Col>
+                                        <Col className="mb-2"> <input className="inputField" placeholder="Select State" /></Col>
                                         <Col>
                                         </Col>
                                     </Row>
                                     <Row className="mt-3">
 
-                                        <Col>
+                                        <Col className="mb-2">
                                             <input className="inputField " placeholder="Landmark (Optional)" />
                                         </Col>
-                                        <Col> <input className="inputField" placeholder="Alternate Phone Number (Optional)" /></Col>
+                                        <Col className="mb-2"> <input className="inputField" placeholder="Alternate Phone Number (Optional)" /></Col>
                                         <Col>
                                         </Col>
                                     </Row>
-                                    <div className="mt-4 mb-3">
-                                        Address type: &nbsp;&nbsp;
-                                        <input type="radio" name="type" value="Home" /> Home &nbsp;&nbsp;
-                                        <input type="radio" name="type" value="Work" /> Work
+                                    <div className="mt-4 mb-3 useInfoWithImg">
+                                        <Row style={{width:'100%'}}>
+                                            <Col sm={12} className="mb-3">Address type: &nbsp;&nbsp;</Col>
+                                            <Col sm={12}  className="useInfoWithImg">
+                                            <input type="radio" name="type" value="Home" />&nbsp; Home &nbsp;
+                                            <input type="radio" name="type" value="Work" />&nbsp; Work
+                                            </Col>
+                                        </Row>
+                                        
+                                      
+                                       
                                     </div>
                                     <button className=" cancle" onClick={() => { setAdd(false) }}>Save</button>
                                     <button className=" cancle ml-2">Cancle</button>
@@ -89,12 +96,12 @@ const ManageAddress = () => {
 
 
 
-                <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                     {!add && (<><button className="addaddress" onClick={() => { setAdd(true) }}> + Add New Address</button><br /></>)}
 
                     {
                         edit ? (
-                            <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                            <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                                 EDIT ADDRESS <br />
 
                                 <div className="location mt-4 mb-2"> <CgTrack size={20} /> &nbsp;&nbsp; <span> Use My Current Location</span></div>

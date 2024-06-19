@@ -72,7 +72,7 @@ const Wallet = () => {
       
     return (
         <AppLayout>
-            <div className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <Row>
                     <Col md={9} sm={12}><h1 style={{ color: 'white' }}>Wallet</h1></Col>
                     <Col md={3} sm={12}><span className="credits">Grass App Credits: <span style={{color:colors.green}}>$25.80</span></span></Col>

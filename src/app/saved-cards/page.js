@@ -11,12 +11,12 @@ const SavedCards = () => {
     const isMobile = useMediaQuery({ maxWidth: 767 });
     return (
         <AppLayout>
-            <div  className={`layoutContent ${isMobile ? 'p-1' : 'p-5'}`}>
+            <div  className={`layoutContent ${isMobile ? 'p-3' : 'p-5'}`}>
                 <h1 style={{ color: 'white' }}>Saved Cards</h1>
                 {
                     add && (
 
-                        <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                        <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                             ADD NEW BANK ACCOUNT <br />
                             <Row>
                                 <Col md={10}>
@@ -67,7 +67,7 @@ const SavedCards = () => {
                     )
                 }
 
-                <div className={`orderHistory ${isMobile ? 'p-1 mt-3' : 'p-5 m,t-3'}`}>
+                <div className={`orderHistory ${isMobile ? 'p-3 mt-3' : 'p-5 m,t-3'}`}>
                     {
                         !add && (<> <button style={{ padding: '10px', borderRadius: '30px', backgroundColor: '#1dd15e5c', color: '#1DD15E', marginTop: '20px', marginBottom: '20px' }} onClick={() => { setAdd(true) }}>+ Add New Bank account</button><br /></>)
                     }
